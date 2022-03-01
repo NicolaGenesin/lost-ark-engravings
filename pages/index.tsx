@@ -85,18 +85,34 @@ const Home: NextPage<HomeProps> = ({ rows, headers }: HomeProps) => {
 							</TableCaption>
 							<Thead>
 								<Tr>
-									<Th bg="#b7e1cd">Green Battle</Th>
-									<Th bg="#93c47d">Green Class</Th>
-									<Th bg="#a4c2f4">Blue Battle</Th>
-									<Th bg="#4a86e8">Blue Class</Th>
+									<Th px="8px" bg="#b7e1cd">
+										Green Battle
+									</Th>
+									<Th px="8px" bg="#93c47d">
+										Green Class
+									</Th>
+									<Th px="8px" bg="#a4c2f4">
+										Blue Battle
+									</Th>
+									<Th px="8px" bg="#4a86e8">
+										Blue Class
+									</Th>
 								</Tr>
 							</Thead>
 							<Tbody bg="white">
 								<Tr>
-									<Td isNumeric>30</Td>
-									<Td isNumeric>30</Td>
-									<Td isNumeric>11</Td>
-									<Td isNumeric>10</Td>
+									<Td fontWeight="bold" textAlign="center">
+										30
+									</Td>
+									<Td fontWeight="bold" textAlign="center">
+										30
+									</Td>
+									<Td fontWeight="bold" textAlign="center">
+										11
+									</Td>
+									<Td fontWeight="bold" textAlign="center">
+										10
+									</Td>
 								</Tr>
 							</Tbody>
 						</Table>
