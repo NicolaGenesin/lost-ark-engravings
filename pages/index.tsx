@@ -25,6 +25,10 @@ interface HomeProps {
 }
 
 const Home: NextPage<HomeProps> = ({ rows, headers }: HomeProps) => {
+	if (!rows || !headers) {
+		return null;
+	}
+
 	return (
 		<Box>
 			<Head>
