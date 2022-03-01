@@ -221,16 +221,16 @@ const Home: NextPage<HomeProps> = ({ rows, headers }: HomeProps) => {
 	);
 };
 
-// export async function getStaticProps() {
-// 	const { rows, headers } = await (await getResults()).json();
+export async function getStaticProps() {
+	const { rows, headers } = await (await getResults()).json();
 
-// 	return {
-// 		props: {
-// 			rows,
-// 			headers,
-// 		},
-// 		revalidate: 20,
-// 	};
-// }
+	return {
+		props: {
+			rows,
+			headers,
+		},
+		revalidate: 60,
+	};
+}
 
 export default Home;
