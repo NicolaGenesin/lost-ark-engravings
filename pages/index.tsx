@@ -34,7 +34,7 @@ const Home: NextPage<HomeProps> = ({ rows, headers }: HomeProps) => {
 			</Head>
 
 			<Center m={"24px"}>
-				<VStack>
+				<VStack spacing="24px">
 					<Text
 						as="h1"
 						fontSize={["xl", "3xl"]}
@@ -65,28 +65,43 @@ const Home: NextPage<HomeProps> = ({ rows, headers }: HomeProps) => {
 										}}
 									>
 										ItsKarma#7822
-									</span>{" "}
-									| Join the discord{" "}
-									<span
-										style={{
-											backgroundImage:
-												"linear-gradient(120deg, #778 0%, #778 100%)",
-											backgroundRepeat: "no-repeat",
-											backgroundSize: "100% 0.4em",
-											backgroundPosition: "0 88%",
-											transition: "background-size 0.25s ease-in",
-										}}
-									>
-										here
 									</span>
-								</a>
+								</a>{" "}
+								<Link
+									href="https://docs.google.com/spreadsheets/d/1JgPTZ_cwgi2keYK2NvA0Dq9hDUz9J8AzrlPmlCQj1j0/edit#gid=2079904319"
+									isExternal
+									textDecoration="underline"
+									fontSize="sm"
+								>
+									(data synched from original spreadsheet)
+								</Link>
 							</Text>
 						</Center>
-						<SocialButton size={12} label={"Twitch"} href={""}>
-							<FaDiscord color="#223" size={28} />
-						</SocialButton>
 					</HStack>
-					<Box p="8px" bg="#cce" borderRadius="md">
+					<Box p="8px" bg="#cce" borderRadius="md" fontSize="xs">
+						<Table variant="unstyled" size="xs">
+							<TableCaption fontSize="xs" fontWeight="bold">
+								TOTALS
+							</TableCaption>
+							<Thead>
+								<Tr>
+									<Th bg="#b7e1cd">Green Battle</Th>
+									<Th bg="#93c47d">Green Class</Th>
+									<Th bg="#a4c2f4">Blue Battle</Th>
+									<Th bg="#4a86e8">Blue Class</Th>
+								</Tr>
+							</Thead>
+							<Tbody bg="white">
+								<Tr>
+									<Td isNumeric>30</Td>
+									<Td isNumeric>30</Td>
+									<Td isNumeric>11</Td>
+									<Td isNumeric>10</Td>
+								</Tr>
+							</Tbody>
+						</Table>
+					</Box>
+					<Box p="8px" bg="#cce" borderRadius="md" fontSize="xs">
 						<Table
 							overflowX="auto"
 							size="xs"
