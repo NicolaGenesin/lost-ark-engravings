@@ -7,7 +7,7 @@ const componentToHex = (component: number) => {
 	return hex.length == 1 ? "0" + hex : hex;
 };
 
-const rgbToHex = ({ red, green, blue }) => {
+const rgbToHex = ({ red, green, blue }: any) => {
 	return (
 		"#" + componentToHex(red) + componentToHex(green) + componentToHex(blue)
 	);
@@ -41,7 +41,7 @@ const getResults = async (targetSheet: string, headerRow: number) => {
 			const backgroundColor = cell.effectiveFormat.backgroundColor;
 			const hexBackgroundColor = rgbToHex(backgroundColor);
 
-			const k = {
+			const k: any = {
 				value,
 				hyperlink: cell.hyperlink,
 			};

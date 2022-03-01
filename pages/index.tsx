@@ -154,7 +154,7 @@ const Home: NextPage<HomeProps> = ({ rows, headers }: HomeProps) => {
 											key={`tr-${index}`}
 											bg={index % 2 === 0 ? "#eee" : "#fff"}
 										>
-											{row.map((item, index: number) => {
+											{row.map((item: any, index: number) => {
 												let width;
 												let fontSize = "sm";
 
@@ -225,7 +225,7 @@ export async function getStaticProps() {
 			rows,
 			headers,
 		},
-		revalidate: 1500,
+		revalidate: 20,
 	};
 }
 
